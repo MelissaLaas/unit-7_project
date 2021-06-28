@@ -4,6 +4,7 @@
       <title>WebApp</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">  
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="css/toggle-switch.css">
       <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;500;600&display=swap" rel="stylesheet">  
       <link rel="stylesheet" href="css/styles.css">
     </head>
@@ -211,7 +212,7 @@
             <label class="switch-light switch-IOS" onclick="">
                 <input type="checkbox" id="emailSetting"/>
                 <strong class="settingsLabel">Send Email Notifications</strong>
-                <span>
+                <span aria-hidden="true">
                     <span>ON</span>
                     <span>Off</span>
                     <a></a>
@@ -220,7 +221,7 @@
             <label class="switch-light switch-IOS" onclick="">
                 <input type="checkbox" id="emailSetting"/>
                 <strong class="settingsLabel">Set Profile to Public</strong>
-                <span>
+                <span aria-hidden="true">
                     <span>ON</span>
                     <span>Off</span>
                     <a></a>
