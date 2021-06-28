@@ -419,19 +419,50 @@ canvas {
         flex-basis: 33%;
     }
 
-    .member-container,
+    .members-container,
     .member-activity {
         flex-direction: row;
         justify-content: flex-start;
         height: 80px;
     }
 
-    .widget-container-full {
-        width: 90vw;
+    .members-text {
+        flex-basis: 75%;
+        align-items: flex-start;
     }
 
-    .widget-container-half {
-        width: 45vw;
+    .members-container :nth-child(3) {
+        margin-left: auto;
+    }
+
+    .arrow {
+        display: block;
+        color: #707fc2;
+        font-size: 20px;
+        margin-left: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .main-header,
+    .traffic {
+        grid-column: 1 / span 2;
+    }
+
+    h1 {
+        flex-basis: 80%;
+    }
+
+    .daily,
+    .members,
+    .message {
+        grid-column: 1 / span 1;
+    }
+
+    .mobile,
+    .recent-activity,
+    .settings {
+        grid-column: 2 / span 1;
     }
 }
 
