@@ -7,6 +7,7 @@
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto;
+    background-color: #e9e8e8;
     grid-template-areas: 
         "header"
         "navigation"
@@ -38,7 +39,7 @@ h1 {
 }
 
 h1 sup {
-    font-weight: 500;
+    font-weight: 6px;
 }
 
 .notifications {
@@ -65,20 +66,16 @@ h1 sup {
 /* ------ Icons -------*/
 
  .bell-icon{
-    fill:white;
-    width: 22px;
+    fill:#ffffff;
+    width: 20px;
     transform-origin: 50% 50%;
    }
-
-.notifications:hover, .alert-banner{
-    cursor: pointer;
-}
 
 #popup{
     position: absolute;
     right: 20px;
     z-index: 1;
-    background-color: rgba(116, 119, 191, .8);
+    background-color: #7477bfcc;
     width: 250px;
 }
 
@@ -197,7 +194,7 @@ section {
 }
 
 /* ------ Social Media -------*/
-.social {
+.social-container {
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -205,6 +202,11 @@ section {
     margin: 0 0 10px 0;
     background-color: #f1efef;
     border: 1px solid #bdbaba;
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
 }
 
 .social-image {
@@ -215,6 +217,7 @@ section {
     border: 5px;
     background-color: #707fc2;
     fill: #f1efef;
+    border: 5px
 }
 
 .social-text {
@@ -223,13 +226,13 @@ section {
 }
 
 .social-text p:first-child {
-    color: #707fc2;
+    color: #6876b1;
     font-weight: bold;
     margin: 1px;
 }
 
 .social-text p:last-child {
-    color: #838383;
+    color: #6d6c6c;
     font-size: 28px;
     margin: 1px;
 }
@@ -252,8 +255,11 @@ section {
 .members-text {
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 2px 10px;
+    text-align: center;
+}
+
+.members-text >*{
     margin: 2px;
     text-align: center;
 }
@@ -276,7 +282,7 @@ p {
 .profile-image-top {
     height: 35px;
     width: 35px;
-    margin: 5px;
+    margin: 4px;
 }
 
 .profile-image {
@@ -308,19 +314,19 @@ p {
 }
 
 /* ------ Settings -------*/
-.switch {
+.switches {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    margin: 10px 0 30px;
+    justify-content: flex-end;
+    margin: 10px 0px 30px;
 }
 
 .settings-button {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
-.switch-on {
+.switch-light {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -352,7 +358,7 @@ label span {
     background-color: #adacac;
 }
 
-.switch-on.switch-off > span {
+.switch-ios.switch-light > span {
     width: 125px;
 }
 
@@ -440,6 +446,10 @@ canvas {
         color: #707fc2;
         font-size: 20px;
         margin-left: auto;
+    }
+
+    .members-text >* {
+        text-align: left;
     }
 }
 
