@@ -3,6 +3,10 @@
     font-family: 'Darker Grotesque', sans-serif;
 }
 
+/* ---------------------------------
+            Grid Layout 
+ ----------------------------------*/
+
 .grid-container {
     display: grid;
     grid-template-columns: 100%;
@@ -16,24 +20,27 @@
     justify-content: center;   
 }
 
-/* ---------------------------------
-        Main Element Styling 
- ----------------------------------*/
-/* ------ header -------*/
-.header {
+header {
     grid-area: header;
     width: 100%;
     color: white;
     background-color: #707fc2;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
     padding: 15px;
 }
+    
+.navigation {
+    grid-area: navigation;
+}
+    
+main {
+    grid-area: main;
+}
 
+/* ---------------------------------
+        Main Element Styling 
+ ----------------------------------*/
+/* ------ header -------*/
 h1 {
-    flex-basis: 35%;
     font-size: 20px;
     font-weight: 400;
 }
@@ -72,17 +79,12 @@ h1 sup {
    }
 
 #popup{
-    position: absolute;
     right: 20px;
-    z-index: 1;
     background-color: #7477bfcc;
     width: 250px;
 }
 
 .popup-message{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     padding: 8px;
     margin: 8px;
 }
@@ -90,10 +92,6 @@ h1 sup {
 /* ------ Navigation -------*/
 
 nav {
-    grid-area: nav;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     background-color: #344079;
 }
 
@@ -106,10 +104,6 @@ nav {
 /* ------ Main -------*/
 
 main {
-    grid-area: main;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
     background-color: #ffffff;
     margin: 0;
 }
@@ -121,13 +115,9 @@ a {
 
 .main-header {
     grid-area: 1 / 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
 }
 
 .alert {
-    grid-column: 1 / span 1;
     margin: 10px;
     color: #ffffff;
     background-color: #707fc2;
@@ -135,9 +125,6 @@ a {
 }
 
 .alert-banner {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     padding: 1em;
     font-weight: 100;
 }
@@ -147,12 +134,10 @@ h2 {
     background-color: #ffffff;
     padding: 10px;
     margin: 2px;
-    flex: 1;
 }
 
 .main-header-search {
     background-color: #e9e8e8;
-    flex: 2;
 }
 
 main h3 {
@@ -166,17 +151,9 @@ section {
     margin: 0px 8px;
 }
 
-.widget-container {
-    display: flex;
-    flex-direction: column;
-}
 
 /* ------ Traffic -------*/
 .traffic-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
     padding: 0;
     margin: 5px;
     list-style-type: none;
@@ -195,18 +172,10 @@ section {
 
 /* ------ Social Media -------*/
 .social-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
     padding: 1em;
     margin: 0 0 10px 0;
     background-color: #f1efef;
     border: 1px solid #bdbaba;
-}
-
-.social {
-    display: flex;
-    flex-direction: column;
 }
 
 .social-image {
@@ -240,9 +209,6 @@ section {
 /* ------ Members -------*/
 .member-container,
 .member-activity {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 8px;
     border-bottom: 1px solid #d3d2d2 ;
 }
@@ -253,8 +219,6 @@ section {
 }
 
 .members-text {
-    display: flex;
-    flex-direction: column;
     padding: 2px 10px;
     text-align: center;
 }
@@ -291,11 +255,6 @@ p {
 }
 
 /* ------ Message Input -------*/
-.message, .settings {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
 
 .form-area,
 .form-field {
@@ -315,21 +274,10 @@ p {
 
 /* ------ Settings -------*/
 .switches {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
     margin: 10px 0px 30px;
 }
 
-.settings-button {
-    display: flex;
-    justify-content: flex-end;
-}
-
 .switch-light {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     margin-bottom: 28px;
 }
 
@@ -350,7 +298,6 @@ label span {
     width: 100%;
     border-radius: 5px;
     border: 1px #f3f1f1 solid;
-    flex-basis: 46%;
     text-transform: uppercase;
 }
 
@@ -380,65 +327,24 @@ canvas {
             "nagivation main";
     }
 
-    h1 {
-        flex-basis: 70%;
-    }
-
-    nav {
-        flex-direction: column;
-        justify-content: left;
-    }
-
-    main {
-        grid-template-columns: 50%;
-    }
-
-    section,
-    .main-header,
-    .alert {
-        grid-column: 1 / span 2;
-    }
-
-    .main-header-search {
-        flex-basis: 75%;
-    }
-
-    .traffic-nav {
-        justify-content: flex-end;
-    }
-
-    .daily {
+    .daily, .members, .message {
         grid-column: 1 / span 1;
     }
 
-    .mobile {
+    .mobile, .activity, .settings {
         grid-column: 2 / span 1;
     }
 
-    .social {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
+    .widget-container-full, .widget-container-half {
+        width: 95vw;
     }
 
-    .social h3 {
-        flex-basis: 33%;
+    .widget-container-full {
+        width: 90vw;
     }
 
-    .members-container,
-    .member-activity {
-        flex-direction: row;
-        justify-content: flex-start;
-        height: 80px;
-    }
-
-    .members-text {
-        flex-basis: 75%;
-        align-items: flex-start;
-    }
-
-    .members-container :nth-child(3) {
-        margin-left: auto;
+    .widget-container-half {
+        width: 45vw;
     }
 
     .arrow {
@@ -447,13 +353,9 @@ canvas {
         font-size: 20px;
         margin-left: auto;
     }
-
-    .members-text >* {
-        text-align: left;
-    }
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
     .main-header,
     .traffic {
         grid-column: 1 / span 2;
@@ -474,5 +376,5 @@ canvas {
     .settings {
         grid-column: 2 / span 1;
     }
-}
+} */
 

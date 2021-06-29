@@ -1,6 +1,5 @@
-let trafficCanvas = document.getElementById('traffic-chart');
-
 //LINE GRAPH - traffic
+let trafficCanvas = document.getElementById('traffic-chart');
 let trafficData = {
     labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
     datasets: [{
@@ -64,7 +63,7 @@ const dailyOptions = {
         }
     }
 };
-
+//create second chart
 let dailyChart = new Chart(dailyCanvas, {
     type: 'bar',
     data: dailyData,
@@ -79,13 +78,14 @@ const mobileData = {
         label: '# of Users',
         data: [2000, 550, 500],
         borderWidth: 0,
-        backgroundColor: ['#7477BF', '#78CF82', '#51B6C8']
+        backgroundColor: ['#7477BF', '#78CF82', '#51B6C8'],
+
+        hoverOffset : 4,
     }]
 };
 
 //object literal for options
 const mobileOptions = {
-    aspectRatio: 2,
     plugins: {
         legend: {
             position: 'right',
@@ -97,6 +97,7 @@ const mobileOptions = {
     }
 };
 
+//create third chart
 let mobileChart = new Chart(mobileCanvas, {
     type: 'doughnut',
     data: mobileData,

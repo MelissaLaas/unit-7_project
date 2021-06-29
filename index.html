@@ -11,7 +11,7 @@
 
 <body class="grid-container">
  <!-- dashboard -->   
-<header>
+<header class="header">
     <div class="main-header"> 
         <h2 class="headline">Web App <sub>TM</sub></h2>
         <div class="notifications" id="notifications">
@@ -24,10 +24,11 @@
     
         <img class="profile-image-top" src="images/member-1.jpg" alt="Profile image of active member">
         <h3 class="student-name">Victoria Chambers</h3>
+    </div>
 </header>
 
 <!-- navigation -->
-<nav>
+<nav class="navigation">
     <a href="#home"><img src="svgs/home.svg" class="icon" alt="home icon"></a>
     <a href="#traffic"><img src="svgs/bar-chart.svg" class="icon" alt="home icon"></a>
     <a href="#members"><img src="svgs/members.svg" class="icon" alt="home icon"></a>
@@ -36,12 +37,12 @@
 
 <!-- main -->
 <main>
-        <div class="main-header">
-            <h2 class="headline">Dashboard</h2>
-            <div class="main-header-search">
-                <input type="search" placeholder="search..."/>
-            </div>
+    <div class="main-header">
+        <h2 class="headline">Dashboard</h2>
+        <div class="main-header-search">
+            <input type="search" placeholder="search..."/>
         </div>
+    </div>
 
     <!-- alert bar -->
     <div class="alert" id="alert">
@@ -70,14 +71,18 @@
     <section class="daily">
         <h3>DAILY TRAFFIC</h3>
             <div class="widget-container-half">
-                <canvas id="daily-chart"></canvas>
+                <canvas id="daily-chart">
+                    <!-- add javascript to charts.js -->
+                </canvas>
             </div>
     </section>
 
     <section class="mobile">
         <h3>MOBILE USERS</h3>
             <div class="widget-container-half">
-                <canvas id="daily-chart"></canvas>
+                <canvas id="mobile-chart">
+                    <!-- add javascript to charts.js -->
+                </canvas>
             </div>
     </section>
 
@@ -115,7 +120,7 @@
             </div>
             <div class="social-text">
                 <p>Twitter</p>
-                <p>22,189/p>
+                <p>22,189</p>
             </div>
     </div>
 
@@ -246,7 +251,7 @@
         </div>
     </section>
 </main>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.0/chart.js"></script>
     <script src="js/charts.js"></script>
     <script src="js/apps.js"></script>
 </body>

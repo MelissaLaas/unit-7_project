@@ -3,6 +3,7 @@ const alertBanner = document.getElementById("alert");
 const user = document.getElementById("userField");
 const message = document.getElementById("messageField");
 const send = document.getElementById("send");
+const trafficNav = document.getElementById("traffic-nav");
 
 // alert banner - html
 alertBanner.innerHTML =
@@ -20,7 +21,7 @@ alertBanner.addEventListener('click', e => {
 }); 
 
 //messaging section
-form.addEventListener('submit', e => {
+send.addEventListener('submit', e => {
     // check if user and message fields are empty
     if (user.value === "" && message.value === "") {
         alert("Please fill out user and message fields before sending");
@@ -37,7 +38,7 @@ form.addEventListener('submit', e => {
 });
 
 //traffic
-trafficNav.addEventListener('click', e =>{
+trafficNav.addEventListener('click', e => {
     const element = e.target;  
     const datatype = element.textContent;   
 
