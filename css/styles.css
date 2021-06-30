@@ -39,36 +39,37 @@ header {
 h1 {
   font-size: 18px;
   font-weight: 300;
+  margin: 5px;
 }
 
-/* line 43, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+/* line 44, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 h1 strong {
   font-weight: 600;
 }
 
-/* line 47, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+/* line 48, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 h1 sup {
   font-size: 8px;
 }
 
-/* line 51, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+/* line 52, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .notifications {
   padding: 10px;
   border-right: 1px #929292 solid;
 }
 
-/* line 56, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+/* line 57, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .bellDot {
   height: 5px;
   width: 5px;
   background-color: #00ff00;
   border-radius: 50%;
   position: relative;
-  top: 0px;
+  top: -23px;
   left: 20px;
 }
 
-/* line 66, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+/* line 67, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .student-name {
   font-size: 14px;
   font-weight: 300;
@@ -91,24 +92,24 @@ h1 sup {
   }
 }
 
-/* line 88, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+/* line 89, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .bell-icon {
   fill: white;
   width: 22px;
   transform-origin: 50% 50%;
 }
 
-/* line 94, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+/* line 95, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .notifications:hover, .alert-banner {
   cursor: pointer;
 }
 
-/* line 98, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+/* line 99, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .bell-icon:hover {
   animation: rinkle .5s ease-in;
 }
 
-/* line 102, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+/* line 103, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 #popup {
   position: absolute;
   right: 20px;
@@ -118,7 +119,7 @@ h1 sup {
 }
 
 /*--- navigation ---*/
-/* line 111, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+/* line 112, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 nav {
   grid-area: nav;
   background-color: #3a436b;
@@ -127,7 +128,7 @@ nav {
   justify-content: center;
 }
 
-/* line 119, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+/* line 120, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .icon {
   width: 35px;
   height: 35px;
@@ -135,7 +136,7 @@ nav {
 }
 
 /*--- main ---*/
-/* line 127, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+/* line 128, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 main {
   grid-area: main;
   display: grid;
@@ -145,13 +146,13 @@ main {
   margin: 0;
 }
 
-/* line 136, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+/* line 137, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 a {
   text-decoration: none;
   color: #707fc2;
 }
 
-/* line 141, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+/* line 142, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .main-header {
   grid-area: 1 / 1;
   display: flex;
@@ -159,7 +160,7 @@ a {
   justify-content: flex-start;
 }
 
-/* line 148, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+/* line 149, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .alert {
   background-color: #707fc2;
   margin: 8px;
@@ -168,7 +169,7 @@ a {
   border-radius: 5px;
 }
 
-/* line 156, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+/* line 157, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .alert-banner {
   display: flex;
   flex-direction: row;
@@ -177,7 +178,7 @@ a {
   font-weight: 100;
 }
 
-/* line 165, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+/* line 166, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 h2 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
@@ -188,7 +189,7 @@ h2 {
   flex: 1;
 }
 
-/* line 175, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+/* line 176, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .dashboard-search {
   background-color: #e9e8e8;
   border-bottom: 1px #adacac solid;
@@ -196,21 +197,20 @@ h2 {
   flex: 2;
 }
 
-/* line 182, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+/* line 183, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 main h3 {
   font-size: 14px;
 }
 
 /*--- section ---*/
-/* line 187, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+/* line 188, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 section {
   padding: 12px;
   border-bottom: 1px #ebebeb solid;
 }
 
-/* line 192, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
-.widget-container-full,
-.widget-container-half {
+/* line 193, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+.widget-container {
   display: flex;
   flex-direction: column;
 }
@@ -333,35 +333,36 @@ canvas {
 p {
   font-size: 14px;
   margin: 0;
+  text-align: center;
 }
 
-/* line 303, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
-.arrow {
+/* line 304, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+.moreArrow {
   display: none;
 }
 
 /*--- profile images ---*/
-/* line 308, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+/* line 309, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .profile-image,
 .profile-top {
   border-radius: 50%;
 }
 
-/* line 313, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+/* line 314, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .profile-top {
   height: 40px;
   width: 40px;
   margin: 5px;
 }
 
-/* line 319, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+/* line 320, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .profile-image {
   height: 60px;
   width: 60px;
 }
 
 /*--- messages and settings ---*/
-/* line 325, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+/* line 326, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .message-container,
 .settings-container {
   display: flex;
@@ -369,7 +370,7 @@ p {
   justify-content: space-around;
 }
 
-/* line 331, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+/* line 332, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .formArea,
 .formField {
   margin-bottom: 1em;
@@ -382,13 +383,13 @@ p {
   width: 100%;
 }
 
-/* line 343, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+/* line 344, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .formArea {
   height: 150px;
 }
 
 /*github guidance: */
-/* line 348, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+/* line 349, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .switches {
   display: flex;
   flex-direction: column;
@@ -396,7 +397,7 @@ p {
   margin: 10px 0px 30px;
 }
 
-/* line 355, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+/* line 356, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .settings-button {
   display: flex;
   justify-content: space-between;
@@ -422,8 +423,8 @@ label strong {
 }
 
 /* line 378, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
-.button-save,
-.button-cancel {
+.button1,
+.button2 {
   background-color: #707fc2;
   color: #f3f1f1;
   padding: 20px;
@@ -435,7 +436,7 @@ label strong {
 }
 
 /* line 390, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
-.button-cancel {
+.button2 {
   background-color: #adacac;
 }
 
@@ -456,7 +457,7 @@ label strong {
   }
   /* line 410, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
   h1 {
-    flex-basis: 75%;
+    flex-basis: 74%;
   }
   /* line 414, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
   nav {
@@ -488,7 +489,7 @@ label strong {
   /* line 441, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
   .daily {
     grid-column: 1 / span 1;
-    border-right: .1px #ebebeb solid;
+    border-right: 1px #ebebeb solid;
   }
   /* line 446, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
   .mobile {
@@ -510,56 +511,57 @@ label strong {
   }
   /* line 464, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
   .members,
-  .activity-container {
+  .member-activity {
+    display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    height: 80px;
+    align-items: flex-start;
+    grid-gap: 5px;
   }
-  /* line 471, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+  /* line 472, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
   .members-p {
     flex-basis: 75%;
     align-items: flex-start;
   }
-  /* line 476, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+  /* line 477, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
   .members :nth-child(3) {
     margin-left: auto;
   }
-  /* line 480, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
-  .arrow {
+  /* line 481, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+  .moreArrow {
     display: block;
     color: #707fc2;
     font-size: 20px;
     margin-left: auto;
   }
-  /* line 487, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+  /* line 488, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
   .members-p > * {
     text-align: left;
   }
 }
 
 @media (min-width: 1024px) {
-  /* line 495, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+  /* line 496, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
   .main-container,
   .traffic {
     grid-column: 1 / span 2;
   }
-  /* line 500, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+  /* line 501, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
   h1 {
     flex-basis: 80%;
   }
-  /* line 504, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+  /* line 505, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
   .daily,
   .members-container,
   .message {
     grid-column: 1 / span 1;
   }
-  /* line 510, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+  /* line 511, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
   .mobile,
   .activity-container,
   .settings {
     grid-column: 2 / span 1;
   }
-  /* line 516, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+  /* line 517, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
   .members-container, .message {
     border-right: .1px #ebebeb solid;
   }
