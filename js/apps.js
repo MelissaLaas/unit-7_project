@@ -67,3 +67,19 @@ trafficNav.addEventListener('click', e => {
 
 
 ///// localStorage //////
+
+const emailCheck = document.getElementById("emailSetting");
+const switchCheck = document.getElementById("switchSetting");
+const timeZone = document.getElementById("timezone");
+
+if(localStorage.length != 0){
+    localStorage.getItem('emailNotificationsOn') === "false"?
+        emailCheck.checked = false:
+        emailCheck.checked = true;
+    
+    localStorage.getItem('profilePublic') === "false"?
+        switchCheck.checked = false:
+        switchCheck.checked = true;
+   
+   timeZone.value = localStorage.timeZone    
+}

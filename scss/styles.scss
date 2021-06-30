@@ -1,7 +1,6 @@
 * {
     box-sizing: border-box;
     font-family: 'Darker Grotesque', sans-serif;
-    color: rgb(75, 75, 75);
 }
 
 /*------------------------
@@ -17,7 +16,6 @@
         "main";
     background-color: rgb(233, 232, 232);
     margin: auto;
-    font-family: 'Roboto', sans-serif;
     justify-content: center;    
 }
 
@@ -183,7 +181,6 @@ h2 {
 
 main h3 {
     font-size: 14px;
-    text-transform: uppercase;
 }
 
 /*--- section ---*/
@@ -226,11 +223,11 @@ canvas {
 }
 
 /*--- social media ---*/
-.social {
+.social-container {
     display: flex;
     flex-direction: column;
 }
-.social-container {
+.social {
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -284,7 +281,7 @@ canvas {
     border-bottom: none;
 }
 
-.members-text {
+.members-p {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -293,7 +290,7 @@ canvas {
     
 }
 
-.members-text >* {
+.members-p >* {
     margin: 2px;
     text-align: center;
 }
@@ -411,12 +408,16 @@ label strong {
     }
 
     h1 {
-        flex-basis: 72%;
+        flex-basis: 75%;
     }
 
     nav {
         flex-direction: column;
         justify-content: left;
+    }
+
+    p {
+        text-align: left;
     }
 
     main {
@@ -446,17 +447,17 @@ label strong {
         grid-column: 2 / span 1;
     }
 
-    .social {
+    .social-container {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
     }
 
-    .social h3 {
+    .social-container h3 {
         flex-basis: 100%;
     }
 
-    .social-container {
+    .social {
         flex-basis: 33%;
     } 
 
@@ -467,7 +468,7 @@ label strong {
         height: 80px;
     }  
 
-    .members-text {
+    .members-p {
         flex-basis: 75%;
         align-items: flex-start;
     }
@@ -483,7 +484,7 @@ label strong {
         margin-left: auto;
     }
 
-    .members-text >*{
+    .members-p >*{
      text-align: left;
     }
 
@@ -507,7 +508,7 @@ label strong {
     }
 
     .mobile,
-    .recent-activity,
+    .activity-container,
     .settings {
         grid-column: 2 / span 1;
     }
