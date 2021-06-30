@@ -1,380 +1,443 @@
+/* line 1, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 * {
-    box-sizing: border-box;
-    font-family: 'Darker Grotesque', sans-serif;
+  box-sizing: border-box;
 }
 
-/* ---------------------------------
-            Grid Layout 
- ----------------------------------*/
-
-.grid-container {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    background-color: #e9e8e8;
-    grid-template-areas: 
-        "header"
-        "navigation"
-        "main";
-    margin: auto;
-    justify-content: center;   
-}
-
+/*------------------------
+        Elements
+------------------------*/
+/*--- header ---*/
+/* line 9, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 header {
-    grid-area: header;
-    width: 100%;
-    color: white;
-    background-color: #707fc2;
-    padding: 15px;
-}
-    
-.navigation {
-    grid-area: navigation;
-}
-    
-main {
-    grid-area: main;
+  grid-area: header;
+  width: 100%;
+  background-color: #707fc2;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  color: white;
 }
 
-/* ---------------------------------
-        Main Element Styling 
- ----------------------------------*/
-/* ------ header -------*/
+/* line 21, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 h1 {
-    font-size: 20px;
-    font-weight: 400;
+  font-size: 18px;
+  font-weight: 300;
 }
 
+/* line 26, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+h1 strong {
+  font-weight: 600;
+}
+
+/* line 30, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 h1 sup {
-    font-weight: 6px;
+  font-size: 8px;
 }
 
+/* line 34, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .notifications {
-    padding: 10px;
-    border-right: 1px #929292 solid;
+  padding: 10px;
+  border-right: 1px  #929292 solid;
 }
 
+/* line 39, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .bellDot {
-    height: 6px;
-    width: 6px;
-    background-color: rgb(145, 212, 145);
-    border-radius: 50%;
-    position: relative;
-    top: -30px;
-    left: 20px;
+  height: 6px;
+  width: 6px;
+  background-color: #00ff00;
+  border-radius: 50%;
+  position: relative;
+  top: -30px;
+  left: 20px;
 }
 
+/* line 49, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .student-name {
-    font-size: 15px;
-    text-align: center;
-    margin: 0px 6px;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  margin: 0px 6px;
 }
 
-/* ------ Icons -------*/
-
- .bell-icon{
-    fill:#ffffff;
-    width: 20px;
-    transform-origin: 50% 50%;
-   }
-
-#popup{
-    right: 20px;
-    background-color: #7477bfcc;
-    width: 250px;
+@keyframes rinkle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-45deg);
+  }
 }
 
-.popup-message{
-    padding: 8px;
-    margin: 8px;
+/* line 71, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+.bell-icon {
+  fill: white;
+  width: 22px;
+  transform-origin: 50% 50%;
 }
 
-/* ------ Navigation -------*/
+/* line 77, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+.notifications:hover, .alert-banner {
+  cursor: pointer;
+}
 
+/* line 81, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+.bell-icon:hover {
+  animation: rinkle .5s ease-in;
+}
+
+/* line 85, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+#popup {
+  position: absolute;
+  right: 20px;
+  z-index: 1;
+  background-color: #7477bfcc;
+  width: 250px;
+}
+
+/* line 93, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+.popup-message {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 8px;
+  margin: 8px;
+}
+
+/*--- navigation ---*/
+/* line 102, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 nav {
-    background-color: #344079;
+  grid-area: nav;
+  background-color: #3a436b;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
+/* line 110, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .icon {
-    width: 30px;
-    height: 30px;
-    margin: 10px;
+  width: 35px;
+  height: 35px;
+  margin: 10px;
 }
 
-/* ------ Main -------*/
-
+/*--- main ---*/
+/* line 118, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 main {
-    background-color: #ffffff;
-    margin: 0;
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  background-color: #ffffff;
+  margin: 0;
 }
 
+/* line 127, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 a {
-    text-decoration: none;
-    color: #707fc2;
+  text-decoration: none;
+  color: #707fc2;
 }
 
+/* line 132, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .main-header {
-    grid-area: 1 / 1;
+  grid-area: 1 / 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
+/* line 139, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .alert {
-    margin: 10px;
-    color: #ffffff;
-    background-color: #707fc2;
-    border-radius: 5px;
+  background-color: #707fc2;
+  margin: 8px;
+  color: #ffffff;
+  grid-column: 1 / span 1;
+  border-radius: 5px;
 }
 
+/* line 147, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .alert-banner {
-    padding: 1em;
-    font-weight: 100;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em;
+  font-weight: 100;
 }
 
+/* line 156, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 h2 {
-    font-size: 20px;
-    background-color: #ffffff;
-    padding: 10px;
-    margin: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: lighter;
+  background-color: white;
+  padding: 10px;
+  margin: 2px;
+  flex: 1;
 }
 
-.main-header-search {
-    background-color: #e9e8e8;
+/* line 166, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+.main-dashboard-search {
+  background-color: #e9e8e8;
+  border-bottom: 1px #adacac solid;
+  border-left: 1px #adacac solid;
+  flex: 2;
 }
 
+/* line 173, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 main h3 {
-    text-transform: uppercase;
-    font-size: 14px;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
-/* ------ Sections -------*/
+/*--- section ---*/
+/* line 179, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 section {
-    padding: 10px;
-    margin: 0px 8px;
+  padding: 12px;
+  border-bottom: 1px #ebebeb solid;
 }
 
+/* line 184, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+.widget-container-full,
+.widget-container-half {
+  display: flex;
+  flex-direction: column;
+}
 
-/* ------ Traffic -------*/
+/*--- traffic ---*/
+/* line 191, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .traffic-nav {
-    padding: 0;
-    margin: 5px;
-    list-style-type: none;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+  margin: 5px;
 }
 
+/* line 200, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .traffic-nav-link {
-    padding: 5px;
+  padding: 5px;
+  font-weight: 400;
 }
 
+/* line 205, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .active {
-    color: #ffffff;
-    background-color: #59b359;
-    border-radius: 25px;
-    padding: 10px;
+  color: white;
+  background-color: #49c449;
+  border-radius: 25px;
+  padding: 10px;
 }
 
-/* ------ Social Media -------*/
+/*--- social media ---*/
+/* line 213, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+.social {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 217, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .social-container {
-    padding: 1em;
-    margin: 0 0 10px 0;
-    background-color: #f1efef;
-    border: 1px solid #bdbaba;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  background-color: #f1efef;
+  border-radius: 5px;
+  border: 1px solid #cccbcb;
+  padding: 1em;
+  margin: 0 0 10px 0;
 }
 
+/* line 228, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .social-image {
-    height: 65px;
-    width: 65px;
-    padding: 15px;
-    border-radius: 50%;
-    border: 5px;
-    background-color: #707fc2;
-    fill: #f1efef;
-    border: 5px
+  width: 70px;
+  height: 70px;
+  padding: 15px;
+  background-color: #707fc2;
+  fill: #f1efef;
+  border-radius: 50%;
+  border: 5px;
 }
 
+/* line 238, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .social-text {
-    text-align: left;
-    margin: 5px;
+  text-align: left;
+  margin: 5px;
 }
 
+/* line 243, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .social-text p:first-child {
-    color: #6876b1;
-    font-weight: bold;
-    margin: 1px;
+  color: #707fc2;
+  font-weight: bold;
+  margin: 1px;
 }
 
+/* line 249, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .social-text p:last-child {
-    color: #6d6c6c;
-    font-size: 28px;
-    margin: 1px;
+  color: #808080;
+  font-size: 30px;
+  margin: 1px;
 }
 
-/* ------ Members -------*/
-.member-container,
-.member-activity {
-    padding: 8px;
-    border-bottom: 1px solid #d3d2d2 ;
+/*--- members container ---*/
+/* line 256, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+.members-container,
+.member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px #d3d2d2 solid;
 }
 
-.member-activity:last-child,
-.member-container:last-child {
-    border-bottom: none;
+/* line 266, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+.member:last-child,
+.members-container:last-child {
+  border-bottom: none;
 }
 
+/* line 271, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .members-text {
-    padding: 2px 10px;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  padding: 2px 10px;
 }
 
-.members-text >*{
-    margin: 2px;
-    text-align: center;
+/* line 280, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+.members-text > * {
+  margin: 2px;
+  text-align: center;
 }
 
+/* line 285, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 p {
-    font-size: 14px;
-    margin: 0;
+  font-size: 14px;
+  margin: 0;
 }
 
+/* line 290, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .arrow {
-    display: none;
+  display: none;
 }
 
-/* ------ Members images -------*/
+/*--- profile images ---*/
+/* line 295, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .profile-image,
-.profile-image-top {
-    border-radius: 50%;
+.profile-top {
+  border-radius: 50%;
 }
 
-.profile-image-top {
-    height: 35px;
-    width: 35px;
-    margin: 4px;
+/* line 300, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+.profile-top {
+  height: 40px;
+  width: 40px;
+  margin: 5px;
 }
 
+/* line 306, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .profile-image {
-    height: 55px;
-    width: 55px;
+  height: 60px;
+  width: 60px;
 }
 
-/* ------ Message Input -------*/
-
-.form-area,
-.form-field {
-    width: 100%;
-    margin-bottom: 1em;
-    padding: 1em;
-    font-size: 14px;
-    background-color: #e9e8e8;
-    border-radius: 5px;
-    border: 1px solid #a7a7a7;
-    color: #585858;
+/*--- messages and settings ---*/
+/* line 312, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+.message-container,
+.settings-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-.form-area {
-    height: 150px;
+/* line 318, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+.formArea,
+.formField {
+  margin-bottom: 1em;
+  background-color: #e9e8e8;
+  border-radius: 5px;
+  border: 1px #ccc9c9 solid;
+  padding: 1em;
+  font-size: 14px;
+  color: #707070;
+  width: 100%;
 }
 
-/* ------ Settings -------*/
+/* line 330, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+.formArea {
+  height: 150px;
+}
+
+/*github guidance: */
+/* line 335, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .switches {
-    margin: 10px 0px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 10px 0px 30px;
 }
 
+/* line 342, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+.settings-button {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 348, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .switch-light {
-    margin-bottom: 28px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
+/* line 356, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 label span {
-    border: 3px solid grey;
-    border: 5px;
+  border: 2px #808080 solid;
+  border: 5px;
 }
 
-.settingLabel {
-    flex-basis: 210px;
+/* line 361, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+label strong {
+  flex-basis: 210px;
 }
 
-.button-primary,
-.button-disabled{
-    background-color: #707fc2;
-    color:#f3f1f1;
-    padding: 20px;
-    width: 100%;
-    border-radius: 5px;
-    border: 1px #f3f1f1 solid;
-    text-transform: uppercase;
+/* line 365, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+.button-save,
+.button-cancel {
+  background-color: #707fc2;
+  color: #f3f1f1;
+  padding: 20px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px #f3f1f1 solid;
+  flex-basis: 47%;
+  text-transform: uppercase;
 }
 
-.button-disabled{
-    background-color: #adacac;
+/* line 377, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
+.button-cancel {
+  background-color: #adacac;
 }
 
+/* line 381, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
 .switch-ios.switch-light > span {
-    width: 125px;
+  width: 125px;
 }
 
-/* ------ Widget container -------*/
-canvas {
-    max-width: 100%;
-}
+/*------------------------
+     Grid Containers
+------------------------*/
+/*------------------------
+        Media Queries
+------------------------*/
 
-/* ---------------------------------
-            Media Queries 
- ----------------------------------*/
-
- @media (min-width: 768px) {
-    .grid-container {
-        grid-template-columns: 55px 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: 
-            "header header"
-            "nagivation main";
-    }
-
-    .daily, .members, .message {
-        grid-column: 1 / span 1;
-    }
-
-    .mobile, .activity, .settings {
-        grid-column: 2 / span 1;
-    }
-
-    .widget-container-full, .widget-container-half {
-        width: 95vw;
-    }
-
-    .widget-container-full {
-        width: 90vw;
-    }
-
-    .widget-container-half {
-        width: 45vw;
-    }
-
-    .arrow {
-        display: block;
-        color: #707fc2;
-        font-size: 20px;
-        margin-left: auto;
-    }
-}
-
-/* @media (min-width: 1024px) {
-    .main-header,
-    .traffic {
-        grid-column: 1 / span 2;
-    }
-
-    h1 {
-        flex-basis: 80%;
-    }
-
-    .daily,
-    .members,
-    .message {
-        grid-column: 1 / span 1;
-    }
-
-    .mobile,
-    .recent-activity,
-    .settings {
-        grid-column: 2 / span 1;
-    }
-} */
-
+/*# sourceMappingURL=styles.css.map */
