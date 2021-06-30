@@ -2,8 +2,9 @@
 const alertBanner = document.getElementById("alert");
 const user = document.getElementById("userField");
 const message = document.getElementById("messageField");
-const send = document.getElementById("send");
+const form = document.getElementById("form");
 const trafficNav = document.getElementById("traffic-nav");
+
 
 // alert banner - html
 alertBanner.innerHTML =
@@ -20,8 +21,9 @@ alertBanner.addEventListener('click', e => {
         }  
 }); 
 
+
 //messaging section
-send.addEventListener('submit', e => {
+form.addEventListener('submit', e => {
     // check if user and message fields are empty
     if (user.value === "" && message.value === "") {
         alert("Please fill out user and message fields before sending");
