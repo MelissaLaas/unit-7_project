@@ -6,6 +6,7 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link rel="stylesheet" href="css/toggle-switch.css">
       <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;500;600&display=swap" rel="stylesheet">  
+      <link rel="stylesheet" href="css/normalize.css">
       <link rel="stylesheet" href="css/styles.css">
     </head>
 
@@ -215,7 +216,7 @@
         <h3>MESSAGE USER</h3>
 
         <form class="searchUser" id="form">
-            <input type="text" placeholder="Search for user" class="formField" id="userField">
+            <input list="users" placeholder="Search for user" class="formField" id="userField">
             <datalist id="users">
                 <option value="Victoria Chambers"></option>
                 <option value="Dale Byrd"></option>
@@ -241,7 +242,7 @@
                 </span>
             </label>
             <label class="switch-light switch-IOS" onclick="">
-                <input type="checkbox" id="switchSetting"/>
+                <input type="checkbox" id="publicSetting"/>
                 <strong class="settingsLabel">Set Profile to Public</strong>
                 <span aria-hidden="true">
                     <span>OFF</span>

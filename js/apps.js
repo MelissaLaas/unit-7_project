@@ -39,37 +39,10 @@ form.addEventListener('submit', e => {
     }
 });
 
-//traffic
-trafficNav.addEventListener('click', e => {
-    const element = e.target;  
-    const datatype = element.textContent;   
-
-    if(element.className ===  "traffic-nav-link" || element.className ===  "traffic-nav-link active"){
-        //change active button to inactive
-        let lis = document.querySelectorAll(".traffic-nav-link");
-        for(let i=0; i<lis.length; i++){
-            let activeButton = lis[i];
-            if(activeButton.className==="traffic-nav-link active"){
-                activeButton.className="traffic-nav-link"
-            }
-        }
-        //change active button to active
-        if(element.className==="traffic-nav-link"){
-            element.className = "traffic-nav-link active";
-        }
-        
-        //change graph
-            updateTrafficData(datatype);
-            updateChart(trafficChart, trafficData);
-        }
-    }  
-);
-
-
 ///// localStorage //////
 
 const emailCheck = document.getElementById("emailSetting");
-const switchCheck = document.getElementById("switchSetting");
+const switchCheck = document.getElementById("publicSetting");
 const timeZone = document.getElementById("timezone");
 
 if(localStorage.length != 0){
