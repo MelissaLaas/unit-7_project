@@ -79,13 +79,12 @@ const mobileData = {
         data: [2000, 550, 500],
         borderWidth: 0,
         backgroundColor: ['#7477BF', '#78CF82', '#51B6C8'],
-
-        hoverOffset : 4,
     }]
 };
 
 //object literal for options
 const mobileOptions = {
+    aspectRatio: 1.9,
     plugins: {
         legend: {
             position: 'right',

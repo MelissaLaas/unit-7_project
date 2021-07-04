@@ -493,7 +493,7 @@ label strong {
   }
   /* line 446, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
   .mobile {
-    grid-column: 2 / span 1;
+    grid-column: 2 / span 1; 
   }
   /* line 450, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
   .social-container {
