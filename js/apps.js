@@ -3,7 +3,7 @@ const alertBanner = document.getElementById("alert");
 const user = document.getElementById("userField");
 const message = document.getElementById("messageField");
 const form = document.getElementById("form");
-const trafficNav = document.getElementById("traffic-nav");
+const trafficNav = document.querySelector(".traffic-nav");
 const popup = document.getElementById("popup");
 const bellDot = document.getElementById("bellDot");
 
@@ -88,6 +88,32 @@ popup.addEventListener('click', e =>{
     }
 });
 
+//change between traffic data on click
+trafficNav.addEventListener('click', e =>{
+    const element = e.target;  
+    const datatype = element.textContent;    
+    if(element.className ===  "traffic-nav-link" || element.className ===  "traffic-nav-link active"){
+        //change active button to inactive button
+        let list = document.querySelectorAll(".traffic-nav-link");
+        for(let i=0; i<list.length; i++){
+            let activeButton = list[i];
+
+            if(activeButton.className==="traffic-nav-link active"){
+                activeButton.className="traffic-nav-link"
+            }
+        }
+
+        //change clicked button to active
+        if(element.className === "traffic-nav-link"){
+         element.className = "traffic-nav-link active";
+        }
+      
+        //change graph
+            changeTrafficData(datatype);
+            updateChart(trafficChart, trafficData);
+        }
+    }  
+);
 
 ///// localStorage //////
 

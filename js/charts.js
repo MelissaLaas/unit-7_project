@@ -58,16 +58,16 @@ let trafficChart = new Chart(trafficCanvas, {
 
     //change between trafficData
     function changeTrafficData(datatype) {
-        if(datatype === "hourly"){
+        if(datatype === "Hourly"){
             trafficData.datasets[0].data = hourlyData;
             trafficData.labels = hourlyLabels;
-        }else if (datatype === "daily"){
+        }else if (datatype === "Daily"){
             trafficData.datasets[0].data = dailyData;
             trafficData.labels = dailyLabels;
-        }else if (datatype === "weekly"){
+        }else if (datatype === "Weekly"){
             trafficData.datasets[0].data = weeklyData;
             trafficData.labels = weeklyLabels;
-        } else if (datatype === "monthly"){
+        } else if (datatype === "Monthly"){
             trafficData.datasets[0].data = monthlyData;
             trafficData.labels = monthlyLabels;
         }
@@ -75,7 +75,7 @@ let trafficChart = new Chart(trafficCanvas, {
     } 
 
     function updateChart(chart, data) {
-        chart.data.datasets[0].data = datasets[0].data;
+        chart.data.datasets[0].data = data.datasets[0].data;
         chart.data.labels = data.labels;
         chart.update({
             duration: 1000,
