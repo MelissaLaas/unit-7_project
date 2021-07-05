@@ -1,9 +1,26 @@
-//LINE GRAPH - traffic
+//LINE GRAPH - 
+//traffic data
+let hourlyLabels = ['5:00','6:00','7:00','8:00','9:00','10:00','15:00',
+'16:00','17:00','18:00','19:00'];
+let hourlyData = [35, 600, 2000, 1780, 1550, 800, 400, 900, 1700, 1500, 100];
+
+let dailyLabels = ['5','6','7','8','9','10','11',
+'12','13','14','15']
+let dailyData = [1950, 650, 1500, 1900, 1450, 750, 1050, 1300, 1000, 1650, 900];
+
+let weeklyLabels = ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"];
+let weeklyData = [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500];
+
+let monthlyLabels = ['Feb','Mar','Apr','May','Jun','Jul','Aug',
+'Sep','Oct','Nov','Dec'];
+let monthlyData = [900, 1600, 1200, 2000, 1460, 1850,1000, 1950, 1550, 1640, 1990];
+
+//traffic chart
 let trafficCanvas = document.getElementById('traffic-chart');
 let trafficData = {
-    labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
+    labels: weeklyLabels,
     datasets: [{
-        data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500],
+        data: weeklyData,
         backgroundColor: 'rgba(116, 119, 191, .3)',
         borderColor: 'rgba(112, 127, 194, .3)',
         borderWidth: 1,
@@ -39,9 +56,36 @@ let trafficChart = new Chart(trafficCanvas, {
     options: trafficOptions
 });
 
+    //change between trafficData
+    function changeTrafficData(datatype) {
+        if(datatype === "hourly"){
+            trafficData.datasets[0].data = hourlyData;
+            trafficData.labels = hourlyLabels;
+        }else if (datatype === "daily"){
+            trafficData.datasets[0].data = dailyData;
+            trafficData.labels = dailyLabels;
+        }else if (datatype === "weekly"){
+            trafficData.datasets[0].data = weeklyData;
+            trafficData.labels = weeklyLabels;
+        } else if (datatype === "monthly"){
+            trafficData.datasets[0].data = monthlyData;
+            trafficData.labels = monthlyLabels;
+        }
+        updateChart(trafficChart, trafficData)
+    } 
+
+    function updateChart(chart, data) {
+        chart.data.datasets[0].data = datasets[0].data;
+        chart.data.labels = data.labels;
+        chart.update({
+            duration: 1000,
+            easing: 'linear',
+        })
+    };
+
 //BAR GRAPH - daily
 const dailyCanvas = document.getElementById("daily-chart");
-const dailyData = {
+const dailyTrafficData = {
     labels: ["S", "M", "T", "W", "T", "F", "S"],
     datasets: [{
         label: '# of Hits',
@@ -66,7 +110,7 @@ const dailyOptions = {
 //create second chart
 let dailyChart = new Chart(dailyCanvas, {
     type: 'bar',
-    data: dailyData,
+    data: dailyTrafficData,
     options: dailyOptions
 });
 
@@ -84,7 +128,7 @@ const mobileData = {
 
 //object literal for options
 const mobileOptions = {
-    aspectRatio: 1.9,
+    aspectRatio: 2,
     plugins: {
         legend: {
             position: 'right',
