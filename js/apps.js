@@ -4,6 +4,8 @@ const user = document.getElementById("userField");
 const message = document.getElementById("messageField");
 const form = document.getElementById("form");
 const trafficNav = document.getElementById("traffic-nav");
+const popup = document.getElementById("popup");
+const bellDot = document.getElementById("bellDot");
 
 
 // alert banner - html
@@ -38,6 +40,54 @@ form.addEventListener('submit', e => {
         alert(`Message successfully sent to: ${user.value}`);
     }
 });
+
+//create alert messages - shown when clicked
+let messageShown;
+
+function createMessages(){
+    if(popup.childNodes.length==0 && bellDot.style.display !== "none"){
+        for(let i=0; i<2; i++){
+            let message = document.createElement('div');
+        message.className = "popup-message";
+        message.innerHTML =
+        `
+        <p>You have a message from Dawn</p>
+        <p class="message-close">X</p>   
+        `;
+        popup.appendChild(message);
+        }
+    }
+    popup.style.display = "none";
+}
+createMessages();
+
+notifications.addEventListener('click', e =>{
+    const element = e.target;
+    //delete dot, when messages show for first time
+    bellDot.style.display = "none";
+    //only clicking on messages or bell should hide/show messages
+    if(element.className!=="message-close"){
+        if(!messageShown){
+            popup.style.display = "block";
+            messageShown=true;
+        }
+        else{
+            popup.style.display = "none";
+            messageShown= false;
+        }
+            
+    }
+});
+
+popup.addEventListener('click', e =>{
+    const element = e.target;
+    
+    if(element.classList.contains("message-close")){
+        const parent = element.parentNode;
+        parent.parentNode.removeChild(parent);
+    }
+});
+
 
 ///// localStorage //////
 
