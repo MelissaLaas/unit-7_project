@@ -202,6 +202,8 @@ h2 {
 .dashboard-search {
   background-color: #e9e8e8;
   flex: 2;
+  border-bottom: 1px #a4a3a3 solid;
+  border-left: 1px #a4a3a3 solid; 
 }
 
 /* line 183, ../../../../../Users/melissalaas/Desktop/Web-Development/UNIT 7 - SVG/unit-7_project/scss/styles.scss */
