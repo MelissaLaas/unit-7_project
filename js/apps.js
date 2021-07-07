@@ -136,16 +136,18 @@ if(localStorage.length != 0){
     timeZone.value = localStorage.timeZone //get timeZone settings
 }
 
+//store settings when saveButton clicked
 saveButton.addEventListener('click', e => {
     localStorage.setItem( 'emailOn', emailCheck.checked );
     localStorage.setItem( 'publicOn', publicCheck.checked );
-    localStorage.setItem( 'timeZone', timeZone.checked );
+    localStorage.setItem( 'timeZone', timeZone.value );
 });
 
+//clear settings when cancelButton clicked
 cancelButton.addEventListener('click', e => {
     emailCheck.checked = false;
     publicCheck.checked =  false;
-    timeZone.checked = false;
+    timeZone.value = 'default';
     localStorage.clear();
     location.reload();
 });
