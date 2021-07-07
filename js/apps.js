@@ -115,20 +115,37 @@ trafficNav.addEventListener('click', e =>{
     }  
 );
 
-///// localStorage //////
+///// localStorage for user settings, timezone, save, cancel//////
 
 const emailCheck = document.getElementById("emailSetting");
-const switchCheck = document.getElementById("publicSetting");
+const publicCheck = document.getElementById("publicSetting");
 const timeZone = document.getElementById("timezone");
+const saveButton = document.getElementById('save');
+const cancelButton = document.getElementById('cancel');
 
-if(localStorage.length != 0){
-    localStorage.getItem('emailNotificationsOn') === "false"?
+
+if(localStorage.length != 0){ 
+    localStorage.getItem('emailOn') === "false"? //get email settings
         emailCheck.checked = false:
         emailCheck.checked = true;
-    
-    localStorage.getItem('profilePublic') === "false"?
-        switchCheck.checked = false:
-        switchCheck.checked = true;
-   
-   timeZone.value = localStorage.timeZone    
+
+    localStorage.getItem('publicOn') === "false"? //get public settings
+        publicCheck.checked = false:
+        publicCheck.checked = true;
+
+    timeZone.value = localStorage.timeZone //get timeZone settings
 }
+
+saveButton.addEventListener('click', e => {
+    localStorage.setItem( 'emailOn', emailCheck.checked );
+    localStorage.setItem( 'publicOn', publicCheck.checked );
+    localStorage.setItem( 'timeZone', timeZone.checked );
+});
+
+cancelButton.addEventListener('click', e => {
+    emailCheck.checked = false;
+    publicCheck.checked =  false;
+    timeZone.checked = false;
+    localStorage.clear();
+    location.reload();
+});
